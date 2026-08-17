@@ -8,6 +8,7 @@
     <title>Para ti ❤️</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -15,22 +16,25 @@
         }
 
         body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: linear-gradient(135deg, #fff0f3, #ffe4e8);
+            font-family: Georgia, "Times New Roman", serif;
             min-height: 100vh;
+            background:
+                radial-gradient(circle at top, #fff8fa, transparent 45%),
+                linear-gradient(135deg, #ffeef2, #ffdce4);
+            color: #641b2b;
             overflow-x: hidden;
-            color: #5a1725;
         }
 
-        /* =========================
-           🌹🌻 LLUVIA DE FLORES
-        ========================== */
+
+        /* =====================================
+           🌻🌹 LLUVIA DE FLORES
+        ====================================== */
 
         .flores {
             position: fixed;
             inset: 0;
-            pointer-events: none;
             overflow: hidden;
+            pointer-events: none;
             z-index: 1;
         }
 
@@ -39,6 +43,7 @@
             top: -80px;
             animation: caer linear infinite;
             user-select: none;
+            opacity: 0;
         }
 
         .girasol {
@@ -49,9 +54,85 @@
             font-size: 32px;
         }
 
+        .flor:nth-child(1) {
+            left: 3%;
+            animation-duration: 8s;
+            animation-delay: 0s;
+        }
+
+        .flor:nth-child(2) {
+            left: 12%;
+            animation-duration: 11s;
+            animation-delay: 2s;
+        }
+
+        .flor:nth-child(3) {
+            left: 22%;
+            animation-duration: 9s;
+            animation-delay: 4s;
+        }
+
+        .flor:nth-child(4) {
+            left: 32%;
+            animation-duration: 12s;
+            animation-delay: 1s;
+        }
+
+        .flor:nth-child(5) {
+            left: 43%;
+            animation-duration: 8s;
+            animation-delay: 3s;
+        }
+
+        .flor:nth-child(6) {
+            left: 53%;
+            animation-duration: 10s;
+            animation-delay: 5s;
+        }
+
+        .flor:nth-child(7) {
+            left: 64%;
+            animation-duration: 9s;
+            animation-delay: 1s;
+        }
+
+        .flor:nth-child(8) {
+            left: 74%;
+            animation-duration: 12s;
+            animation-delay: 4s;
+        }
+
+        .flor:nth-child(9) {
+            left: 84%;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+
+        .flor:nth-child(10) {
+            left: 94%;
+            animation-duration: 11s;
+            animation-delay: 5s;
+        }
+
+        .flor:nth-child(11) {
+            left: 17%;
+            animation-duration: 13s;
+            animation-delay: 6s;
+        }
+
+        .flor:nth-child(12) {
+            left: 68%;
+            animation-duration: 14s;
+            animation-delay: 7s;
+        }
+
         @keyframes caer {
+
             0% {
-                transform: translateY(-100px) rotate(0deg);
+                transform:
+                    translateY(-100px)
+                    translateX(0)
+                    rotate(0deg);
                 opacity: 0;
             }
 
@@ -59,119 +140,174 @@
                 opacity: 1;
             }
 
+            50% {
+                transform:
+                    translateY(50vh)
+                    translateX(45px)
+                    rotate(180deg);
+            }
+
             90% {
                 opacity: 1;
             }
 
             100% {
-                transform: translateY(110vh) rotate(360deg);
+                transform:
+                    translateY(110vh)
+                    translateX(-40px)
+                    rotate(360deg);
                 opacity: 0;
             }
         }
 
-        /* Diferentes posiciones y velocidades */
 
-        .flor:nth-child(1) {
-            left: 5%;
-            animation-duration: 7s;
-        }
-
-        .flor:nth-child(2) {
-            left: 15%;
-            animation-duration: 10s;
-        }
-
-        .flor:nth-child(3) {
-            left: 25%;
-            animation-duration: 8s;
-        }
-
-        .flor:nth-child(4) {
-            left: 35%;
-            animation-duration: 12s;
-        }
-
-        .flor:nth-child(5) {
-            left: 45%;
-            animation-duration: 9s;
-        }
-
-        .flor:nth-child(6) {
-            left: 55%;
-            animation-duration: 11s;
-        }
-
-        .flor:nth-child(7) {
-            left: 65%;
-            animation-duration: 8s;
-        }
-
-        .flor:nth-child(8) {
-            left: 75%;
-            animation-duration: 10s;
-        }
-
-        .flor:nth-child(9) {
-            left: 85%;
-            animation-duration: 7s;
-        }
-
-        .flor:nth-child(10) {
-            left: 95%;
-            animation-duration: 12s;
-        }
-
-        /* =========================
+        /* =====================================
            ❤️ CONTENIDO PRINCIPAL
-        ========================== */
+        ====================================== */
 
         .contenido {
             position: relative;
             z-index: 2;
+            width: 100%;
             max-width: 1000px;
             margin: auto;
-            padding: 50px 20px;
+            padding: 55px 20px;
             text-align: center;
         }
 
         h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
+            font-size: clamp(34px, 7vw, 58px);
+            margin-bottom: 10px;
+            text-shadow: 0 4px 15px rgba(100, 20, 40, 0.15);
         }
 
         .subtitulo {
-            font-size: 20px;
-            margin-bottom: 40px;
+            font-size: clamp(17px, 3vw, 21px);
+            margin-bottom: 45px;
         }
 
-        /* =========================
-           💌 CARTA
-        ========================== */
 
-        .carta {
-            background: rgba(255, 255, 255, 0.9);
-            max-width: 700px;
-            margin: 0 auto 50px;
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(100, 20, 30, 0.2);
+        /* =====================================
+           💌 CARTA ANIMADA
+        ====================================== */
+
+        .seccion-carta {
+            margin-bottom: 65px;
         }
 
-        .carta h2 {
-            margin-bottom: 20px;
+        .seccion-carta h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
         }
 
-        .carta p {
-            line-height: 1.8;
-            font-size: 18px;
+        .sobre {
+            position: relative;
+            width: 280px;
+            height: 190px;
+            margin: auto;
+            cursor: pointer;
+            perspective: 1000px;
         }
 
-        /* =========================
+        .sobre-cuerpo {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 140px;
+            background: #c92d4b;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 12px 30px rgba(100, 20, 30, 0.25);
+            z-index: 2;
+        }
+
+        .sobre-cuerpo::before,
+        .sobre-cuerpo::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            background: #b92240;
+        }
+
+        .sobre-cuerpo::before {
+            left: 0;
+            clip-path: polygon(0 0, 100% 100%, 0 100%);
+        }
+
+        .sobre-cuerpo::after {
+            right: 0;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
+
+        .tapa {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: #df4562;
+            clip-path: polygon(0 0, 50% 70%, 100% 0);
+            transform-origin: top center;
+            transition: transform 0.8s ease;
+            z-index: 4;
+        }
+
+        .corazon-sobre {
+            position: absolute;
+            z-index: 5;
+            top: 93px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 38px;
+            transition: 0.5s;
+        }
+
+        .carta-papel {
+            position: absolute;
+            left: 5%;
+            bottom: 20px;
+            width: 90%;
+            height: 150px;
+            background: #fffaf5;
+            padding: 22px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            overflow-y: auto;
+            transition: all 0.9s ease;
+            z-index: 1;
+            text-align: left;
+        }
+
+        .carta-papel p {
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* Carta abierta */
+
+        .sobre.abierto .tapa {
+            transform: rotateX(180deg);
+            z-index: 1;
+        }
+
+        .sobre.abierto .carta-papel {
+            bottom: 125px;
+            height: 320px;
+            z-index: 6;
+        }
+
+        .sobre.abierto .corazon-sobre {
+            opacity: 0;
+        }
+
+
+        /* =====================================
            📸 GALERÍA
-        ========================== */
+        ====================================== */
 
         .galeria-container {
-            margin-top: 40px;
+            margin-bottom: 65px;
         }
 
         .galeria-container h2 {
@@ -182,94 +318,146 @@
         .galeria {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 18px;
+            gap: 20px;
         }
 
         .foto {
-            background: white;
+            background: rgba(255, 255, 255, 0.92);
             padding: 10px;
-            border-radius: 15px;
-            box-shadow: 0 7px 20px rgba(100, 20, 30, 0.18);
-            transition: transform 0.3s ease;
+            border-radius: 17px;
+            box-shadow: 0 8px 25px rgba(100, 20, 30, 0.18);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .foto:hover {
-            transform: scale(1.04);
+            transform: translateY(-7px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(100, 20, 30, 0.25);
         }
 
         .foto img {
             width: 100%;
-            height: 230px;
+            height: 240px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 11px;
             display: block;
         }
 
         .foto p {
-            padding: 10px 5px 5px;
+            padding: 11px 5px 5px;
             font-weight: bold;
         }
 
-        /* =========================
+
+        /* =====================================
            🎵 MÚSICA
-        ========================== */
+        ====================================== */
 
         .musica {
-            margin-top: 50px;
             background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(100, 20, 30, 0.15);
+            padding: 30px 20px;
+            border-radius: 22px;
+            box-shadow: 0 10px 30px rgba(100, 20, 30, 0.16);
+            margin-bottom: 50px;
         }
 
         .musica h2 {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .musica p {
+            margin-bottom: 18px;
         }
 
         audio {
             width: 100%;
-            max-width: 500px;
+            max-width: 550px;
         }
 
-        /* =========================
+
+        /* =====================================
+           ❤️ CORAZONES AL TOCAR
+        ====================================== */
+
+        .corazon-click {
+            position: fixed;
+            pointer-events: none;
+            z-index: 999;
+            font-size: 25px;
+            animation: subirCorazon 1.5s ease-out forwards;
+        }
+
+        @keyframes subirCorazon {
+
+            0% {
+                transform: translate(-50%, 0) scale(0.5);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, -120px) scale(1.4);
+                opacity: 0;
+            }
+        }
+
+
+        /* =====================================
            📱 CELULARES
-        ========================== */
+        ====================================== */
 
         @media (max-width: 600px) {
 
             .contenido {
-                padding: 35px 15px;
+                padding: 40px 14px;
             }
 
             h1 {
-                font-size: 32px;
+                font-size: 36px;
             }
 
             .subtitulo {
                 font-size: 17px;
             }
 
-            .carta {
-                padding: 25px 20px;
+            .sobre {
+                transform: scale(0.9);
             }
 
-            .carta p {
-                font-size: 16px;
+            .sobre.abierto .carta-papel {
+                height: 280px;
+            }
+
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
             }
 
             .foto img {
-                height: 200px;
+                height: 180px;
+            }
+
+            .foto p {
+                font-size: 14px;
+            }
+
+            .carta-papel {
+                font-size: 14px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- 🌹🌻 FLORES CAYENDO -->
+
+    <!-- 🌻🌹 LLUVIA DE FLORES -->
 
     <div class="flores">
 
+        <div class="flor girasol">🌻</div>
+        <div class="flor rosa">🌹</div>
         <div class="flor girasol">🌻</div>
         <div class="flor rosa">🌹</div>
         <div class="flor girasol">🌻</div>
@@ -291,26 +479,38 @@
         <h1>Para ti ❤️</h1>
 
         <p class="subtitulo">
-            Un pequeño lugar hecho especialmente para ti 🌻🌹
+            Feliz cumpleaños amor 🌻🌹
         </p>
 
 
         <!-- 💌 CARTA -->
 
-        <section class="carta">
+        <section class="seccion-carta">
 
-            <h2>💌 Mi carta para ti</h2>
+            <h2>💌 Una carta para ti</h2>
 
-            <!--
-                AQUÍ ESCRIBIRÁS TU CARTA.
+            <div class="sobre" id="sobre">
 
-                Puedes borrar este texto y poner
-                tu propio mensaje.
-            -->
+                <div class="carta-papel">
 
-            <p>
-                Aquí irá la carta que quieras dedicarle.
-                ❤️
+                    <p>
+                        Hola amor, no sé cómo expresarme hahaha, pero si lo hago estarás leyendo esto. Desde que llegaste a mi vida haz hecho cambios en ella, no solo para ser el hombre perfecto para ti, sino también ser ese hombre ejemplar que siempre he querido ser, hoy se que es tú cumpleaños, sé que no es una fecha que te agrade mucho por todo lo que haz pasado, pero quiero recordarte de que ya tienes algo, algo que no solo será duradero, que te ha marcado profundamente, que te halla hecho sentir bien… tienes algo que te enamora cada vez más igual que a mí y siendo sincero se que ya te he dado tú regalo pero a pesar de eso no ignorar esté día y quise darte un regalo único, me siento orgulloso y muy feliz de tenerte a mi lado no solo como mi novia, sino también como mi mejor amiga, acompañante de vida y futura madre de mis hijos, eres una mujer que admiro mucho y soy muy feliz a tú lado, amo todos esos momentos en los que durar 5 o 6 horas contigo se sientan minutos, disfruto todo rato contigo, también quiero agradecer que soportaste cada tontería, error e idiotez que haya realizado, a pesar de todos los malos momentos y los buenos quiero recordarte hoy que te amo, incluso más que ayer, feliz cumpleaños amor te amo muchísimo y aun me acuerdo cuando me decías primo y me ignorabas ahaha I love you. ❤️
+                    </p>
+
+                </div>
+
+                <div class="sobre-cuerpo"></div>
+
+                <div class="tapa"></div>
+
+                <div class="corazon-sobre">
+                    ❤️
+                </div>
+
+            </div>
+
+            <p style="margin-top: 20px;">
+                Toca el sobre para abrirlo 💌
             </p>
 
         </section>
@@ -320,7 +520,7 @@
 
         <section class="galeria-container">
 
-            <h2>📸 Nuestros recuerdos</h2>
+            <h2>📸 Momentos especiales <3</h2>
 
             <div class="galeria">
 
@@ -329,12 +529,9 @@
 
                 <div class="foto">
 
-                    <!--
-                        CAMBIA "foto1.jpg"
-                        POR EL NOMBRE REAL DE TU FOTO.
-                    -->
-
-                    <img src="fotos/WhatsApp Image 2026-08-16 at 11.21.08 PM.jpg" alt="Foto 1">
+                    <img
+                        src="fotos/WhatsApp Image 2026-08-16 at 11.21.08_PM.jpg"
+                        alt="Foto 1">
 
                     <p>Foto 1 ❤️</p>
 
@@ -345,7 +542,9 @@
 
                 <div class="foto">
 
-                    <img src="fotos/WhatsApp Image 2026-08-16 at 11.21.08 PM(1).jpg" alt="Foto 2">
+                    <img
+                        src="fotos/WhatsApp_Image_2026-08-16_at_11.21.08_PM_(1).jpg"
+                        alt="Foto 2">
 
                     <p>Foto 2 ❤️</p>
 
@@ -356,7 +555,9 @@
 
                 <div class="foto">
 
-                    <img src="fotos/WhatsApp Image 2026-08-16 at 11.21.09 PM.jpg" alt="Foto 3">
+                    <img
+                        src="fotos/WhatsApp_Image_2026-08-16_at_11.21.09_PM.jpg"
+                        alt="Foto 3">
 
                     <p>Foto 3 ❤️</p>
 
@@ -367,7 +568,9 @@
 
                 <div class="foto">
 
-                    <img src="fotos/WhatsApp Image 2026-08-16 at 11.21.08 PM (3).jpg" alt="Foto 4">
+                    <img
+                        src="fotos/WhatsApp_Image_2026-08-16_at_11.21.08 PM_(3).jpg"
+                        alt="Foto 4">
 
                     <p>Foto 4 ❤️</p>
 
@@ -378,7 +581,9 @@
 
                 <div class="foto">
 
-                    <img src="fotos/WhatsApp Image 2026-08-16 at 11.21.08 PM (2).jpg" alt="Foto 5">
+                    <img
+                        src="fotos/WhatsApp_Image_2026-08-16_at_11.21.08_PM_(2).jpg"
+                        alt="Foto 5">
 
                     <p>Foto 5 ❤️</p>
 
@@ -396,26 +601,69 @@
 
             <h2>🎵 Una canción para nosotros</h2>
 
-            <!--
-                AQUÍ PONDREMOS LA MÚSICA.
-
-                Cuando tengas el archivo MP3,
-                lo colocaremos en:
-
-                musica/cancion.mp3
-
-                y cambiaremos el "src".
-            -->
+            <p>
+                Una canción que me recuerda a ti ❤️
+            </p>
 
             <audio controls>
-                <source src="musica/cancion.mp3" type="audio/mpeg">
-                Tu navegador no puede reproducir esta música.
+
+                <source
+                    src="musica/Lady_Gaga,_Bruno_Mars_-_Die_With_A_Smile_(official Music Video).mp3"
+                    type="audio/mpeg">
+
             </audio>
 
         </section>
 
 
     </main>
+
+
+    <!-- ❤️ JAVASCRIPT -->
+
+    <script>
+
+        /* =====================================
+           💌 ABRIR Y CERRAR CARTA
+        ====================================== */
+
+        const sobre = document.getElementById("sobre");
+
+        sobre.addEventListener("click", function () {
+
+            sobre.classList.toggle("abierto");
+
+        });
+
+
+        /* =====================================
+           ❤️ CORAZONES AL TOCAR LA PANTALLA
+        ====================================== */
+
+        document.addEventListener("click", function (evento) {
+
+            const corazon = document.createElement("div");
+
+            corazon.classList.add("corazon-click");
+
+            corazon.innerHTML = "❤️";
+
+            corazon.style.left = evento.clientX + "px";
+
+            corazon.style.top = evento.clientY + "px";
+
+            document.body.appendChild(corazon);
+
+            setTimeout(function () {
+
+                corazon.remove();
+
+            }, 1500);
+
+        });
+
+    </script>
+
 
 </body>
 </html>
